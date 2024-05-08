@@ -12,10 +12,29 @@ export function getAddress(lat, lng) {
 
         console.log('Formatted address:', data?.results[0]?.formatted_address);
 
-        // return the first formatted address
-        return data?.results[0]?.formatted_address
+        // display the formatted address
+        data?.results[0]?.formatted_address ?
+        displayFormattedAddress(data?.results[0]?.formatted_address)
+        :
+        displayAddressWarningMessage("Can not access the location")
       })
       .catch(error => {
         console.error('Error:', error);
       });
+}
+
+export function displayFormattedAddress(address) {
+  $(document).ready(function () {
+
+    $("#location").val(address);
+    displayAddressWarningMessage("Note: address might not be 100% accurate");
+});
+}
+
+export function displayAddressWarningMessage(message){
+  $(document).ready(function () {
+
+    $("#warningMessage").remove();
+    $("#locationInput").append(`<div id="warningMessage">${message}</div>`)
+});
 }
