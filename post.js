@@ -15,7 +15,7 @@ $(document).ready(function () {
             title: $("#title").val(),
             description: $("#description").val(),
             location: $("#isOnline").prop("checked") ? "Online" : $("#location").val(),
-            price: $("#isFree").prop("checked") ? 0 : $("#fee").val(),
+            fee: $("#isFree").prop("checked") ? 0 : $("#fee").val(),
             isFree: $("#isFree").prop("checked"),
             isOnline: $("#isOnline").prop("checked")
         };
