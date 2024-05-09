@@ -1,7 +1,10 @@
 $(document).ready(function () {
     let eventID = getQueryParam() || null;
-
-    getEventDetails(eventID);
+    
+    if(eventID)
+     getEventDetails(eventID);
+    else
+    displayMessage("No such event found. Make sure the query parameter in the url is correct")
 
     $("#eventForm").submit(function (event) {
         event.preventDefault(); // Prevent page form reloading
@@ -58,7 +61,7 @@ const getEventDetails = (eventID) => {
 
         } else {
             // Display message if id not found in local storage
-            displayMessage("404 page not found");
+            displayMessage("404 page not found. Make sure the query parameter in the url is correct");
         }
     } else {
         // Display message if there's no event data in local storage
