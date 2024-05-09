@@ -18,11 +18,16 @@
         <label for="location" id="locationInput">Location:
 
             <input type="text" id="location" name="location" required>
-            <button type="button" id="getLocationButton">Use my location</button>
+            <button type="button" id="getLocationButton">Use my location</button><br/>
+            <label for="isOnline">Event is online?<input type="checkbox" id="isOnline" name="isOnline"></label>
         </label><br>
 
-        <label for="price">Price:</label><br>
-        <input type="number" id="price" name="price" min="0" required><br><br>
+        <label for="fee">Entry fee:
+            <input type="number" id="fee" name="pfeerice" min="0" required>
+        </label>
+        <label for="isFree"><input type="checkbox" id="isFree" name="isFree">Event is free?</label>
+        <br/>
+        
 
         <input type="submit" value="Submit">
     </form>
