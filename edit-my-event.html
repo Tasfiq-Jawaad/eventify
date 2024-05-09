@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="module" defer src="utility.js"></script>
+    <script type="module" defer src="edit.js"></script>
+</head>
+
+<body>
+    <div id="formContainer">
+        <form id="eventForm">
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" required><br><br>
+
+            <label for="host">Host:</label><br>
+            <input type="text" id="host" name="host" required><br><br>
+
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+
+            <label for="location" id="locationInput">Location:
+
+                <input type="text" id="location" name="location" required>
+                <button type="button" id="getLocationButton">Use my location</button><br />
+                <label for="isOnline">Event is online?<input type="checkbox" id="isOnline" name="isOnline"></label>
+            </label><br>
+
+            <label for="fee">Entry fee:
+                <input type="number" id="fee" name="pfeerice" min="0" required>
+            </label>
+            <label for="isFree"><input type="checkbox" id="isFree" name="isFree">Event is free?</label>
+            <br />
+
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
