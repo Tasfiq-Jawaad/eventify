@@ -13,6 +13,7 @@ $(document).ready(function () {
         // Get form data
         const formData = {
             title: $("#title").val(),
+            host: $("#host").val(),
             description: $("#description").val(),
             location: $("#isOnline").prop("checked") ? "Online" : $("#location").val(),
             fee: $("#isFree").prop("checked") ? 0 : $("#fee").val(),
