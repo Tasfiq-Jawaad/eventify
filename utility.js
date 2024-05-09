@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     $("#getLocationButton").click(getUserLocation);
 
-    $("#isFree").change(function () {
+    $(".isFree").change(function () {
         if (this.checked) {
             $("#fee").val(0);
             $("#fee").prop("disabled", true);
@@ -11,7 +11,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#isOnline").change(function () {
+    $(".isOnline").change(function () {
         if (this.checked) {
             $("#location").val("Online");
             $("#location").prop("disabled", true);
