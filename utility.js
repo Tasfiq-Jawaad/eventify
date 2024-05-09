@@ -43,6 +43,7 @@ export function displayAddressWarningMessage(message) {
 $(document).ready(function () {
   $("#isFree").change(function () {
     if (this.checked) {
+      $("#fee").val(0);
       $("#fee").prop("disabled", true);
     } else {
       $("#fee").prop("disabled", false);
@@ -51,6 +52,7 @@ $(document).ready(function () {
 
   $("#isOnline").change(function () {
     if (this.checked) {
+      $("#fee").val("Online");
       $("#location").prop("disabled", true);
     } else {
       $("#location").prop("disabled", false);
