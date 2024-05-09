@@ -56,20 +56,22 @@ const getEventDetails = (eventID) => {
             $("#fee").val(event.fee).prop("disabled", event.isFree);
             $("#isFree").prop("checked", event.isFree);
 
-            console.log(event)
         } else {
             // Display message if id not found in local storage
-            $("#formContainer").empty();
-            $("#formContainer").append("404 page not found");
+            displayMessage("404 page not found");
         }
     } else {
         // Display message if there's no event data in local storage
-        $("#formContainer").empty();
-        $("#formContainer").append("404 page not found");
+        displayMessage("No saved events");
     }
 }
 
 const getQueryParam = () => {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get("id");
+}
+
+const displayMessage = (message) => {
+    $("#formContainer").empty();
+    $("#formContainer").append(`<p>${message}</p>`);
 }
