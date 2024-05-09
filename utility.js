@@ -52,7 +52,7 @@ $(document).ready(function () {
 
   $("#isOnline").change(function () {
     if (this.checked) {
-      $("#fee").val("Online");
+      $("#location").val("Online");
       $("#location").prop("disabled", true);
     } else {
       $("#location").prop("disabled", false);

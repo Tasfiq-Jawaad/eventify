@@ -18,7 +18,7 @@ function getUserLocation() {
             console.log("Latitude: " + latitude + ", Longitude: " + longitude);
 
             getAddress(latitude, longitude);
-            
+
         }, function (error) {
             // Handle errors
             switch (error.code) {
