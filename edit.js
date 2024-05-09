@@ -22,7 +22,7 @@ const getEventDetails = (eventID) => {
             $("#isOnline").prop("checked", event.isOnline);
             $("#fee").val(event.fee).prop("disabled", event.isFree);
             $("#isFree").prop("checked", event.isFree);
-            
+
             console.log(event)
         } else {
             // Display message if id not found in local storage
@@ -32,7 +32,7 @@ const getEventDetails = (eventID) => {
     } else {
         // Display message if there's no event data in local storage
         $("#formContainer").empty();
-            $("#formContainer").append("404 page not found");
+        $("#formContainer").append("404 page not found");
     }
 }
 
