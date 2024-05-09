@@ -26,9 +26,9 @@ const displayEventDetails = () => {
         });
 
         // Append event list to the container
-        $("#myEventsContainer").append(eventList);
+        $("#eventsContainer").append(eventList);
     } else {
         // Display message if there's no event data in local storage
-        $("#myEventsContainer").append("<p>No saved events</p>");
+        $("#eventsContainer").append("<p>No saved events</p>");
     }
 }
