@@ -4,11 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- jquery cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- custom js script -->
     <script type="module" defer src="utility.js"></script>
     <script type="module" defer src="post.js"></script>
+
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- custom style sheet -->
+    <link rel="stylesheet" href="./global.css" />
+
+    <!-- material-tailwind stylesheet and scripts -->
+    <link rel="stylesheet" href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css" />
+    <script defer type="module" src="https://unpkg.com/@material-tailwind/html@latest/scripts/popover.js"></script>
+    <script defer src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>
+    
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/1ecf19675f.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="relative">
+    <header class="sticky top-0 z-10">
+        <nav class="block w-full max-w-full px-4 py-2 text-white rounded-none shadow-md h-max border-white/80 bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4"
+            id="navbar">
+            <div class="flex items-center justify-between text-white">
+                <a href="#"
+                    class="mr-4 block cursor-pointer py-1.5 font-sans text-3xl font-black leading-relaxed antialiased">
+                    Eventify
+                </a>
+                <div class="flex items-center gap-4">
+                    <div class="hidden mr-4 xl:block">
+                        <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+                            <li class="block p-1 font-sans antialiased font-normal leading-normal ">
+                                <a href=""
+                                    class="flex items-center px-6 py-3 text-center uppercase align-middle transition-all rounded-lg select-none hover:bg-white/10 active:bg-white/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    Home
+                                </a>
+                            </li>
+                            
+                            <li class="block p-1 font-sans antialiased font-normal leading-normal ">
+                                <a href="all-events.html"
+                                    class="flex items-center px-6 py-3 text-center uppercase align-middle transition-all rounded-lg select-none hover:bg-white/10 active:bg-white/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    All event
+                                </a>
+                            </li>
+                            <li class="block p-1 font-sans antialiased font-normal leading-normal ">
+                                <a href="my-events.html"
+                                    class="flex items-center px-6 py-3 text-center uppercase align-middle transition-all rounded-lg select-none hover:bg-white/10 active:bg-white/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    My events
+                                </a>
+                            </li>
+                            <li class="block p-1 font-sans antialiased font-normal leading-normal ">
+                                <a href="post.html"
+                                    class="flex items-center px-6 py-3 text-center uppercase align-middle transition-all rounded-lg select-none hover:bg-white/10 active:bg-white/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    Host a event
+                                </a>
+                            </li>
+                            <li class="block p-1 font-sans antialiased font-normal leading-normal ">
+                                <a href="about.html"
+                                    class="flex items-center px-6 py-3 text-center uppercase align-middle transition-all rounded-lg select-none hover:bg-white/10 active:bg-white/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    About
+                                </a>
+                            </li>
+                            <li class="block p-1 font-sans antialiased font-normal leading-normal ">
+                                <a href="contact-us.html"
+                                    class="flex items-center px-6 py-3 text-center uppercase align-middle transition-all rounded-lg select-none hover:bg-white/10 active:bg-white/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    Contact us
+                                </a>
+                            </li>
+                            <li class="block p-1 font-sans antialiased font-normal leading-normal ">
+                                <a href="sign-in.html"
+                                    class="flex items-center px-6 py-3 text-center uppercase align-middle transition-all rounded-lg select-none hover:bg-white/10 active:bg-white/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    Sign in
+                                </a>
+                            </li>
+                            <li class="block p-1 font-sans antialiased font-normal leading-normal ">
+                                <a href="sign-up.html"
+                                    class="flex items-center px-6 py-3 text-center uppercase align-middle transition-all rounded-lg select-none hover:bg-white/10 active:bg-white/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                                    Sign up
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="block xl:hidden">
+                        <button data-ripple-light="true" data-popover-target="menu"
+                            class="select-none rounded-lg bg-gray-900 py-3 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                            <i class="fa-solid fa-bars text-base text-bold"></i>
+                        </button>
+                        <ul role="menu" data-popover="menu" data-popover-placement="bottom"
+                            class="absolute z-10 min-w-[180px] overflow-auto rounded-md border border-blue-gray-50 bg-white p-3 font-sans text-sm font-normal text-blue-gray-500 shadow-lg shadow-blue-gray-500/10 focus:outline-none right-0">
+                            <li role="menuitem"
+                                class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                                <a href="" class="flex items-center">
+                                    Home
+                                </a>
+                            </li>
+                            <li role="menuitem"
+                                class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                                <a href="all-events.html" class="flex items-center">
+                                    All events
+                                </a>
+                            </li>
+                            <li role="menuitem"
+                                class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                                <a href="my-events.html" class="flex items-center">
+                                    My events
+                                </a>
+                            </li>
+                            <li role="menuitem"
+                                class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                                <a href="post.html" class="flex items-center">
+                                    Host a event
+                                </a>
+                            </li>
+                            <li role="menuitem"
+                                class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                                <a href="about.html" class="flex items-center">
+                                    About
+                                </a>
+                            </li>
+                            <li role="menuitem"
+                                class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                                <a href="contact-us.html" class="flex items-center">
+                                    Contact us
+                                </a>
+                            </li>
+                            <li role="menuitem"
+                                class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                                <a href="sign-in.html" class="flex items-center">
+                                    Sign in
+                                </a>
+                            </li>
+                            <li role="menuitem"
+                                class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                                <a href="sign-up.html" class="flex items-center">
+                                    Sign up
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
     <form id="eventForm">
         <label for="title">Title:</label><br>
         <input type="text" id="title" name="title" required><br><br>
