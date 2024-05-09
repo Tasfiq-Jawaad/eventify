@@ -1,0 +1,17 @@
+body{
+    background-color: #15141a;
+}
+
+#navbar::after {
+    content: "";
+    position: absolute;
+    width: 30px; 
+    height: 30px; 
+    background-color: white; 
+    
+    z-index: 100;
+    border-radius: 100%;
+    top: 0px;
+    left: 0px;
+    filter: blur(30px);
+}
