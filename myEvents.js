@@ -19,6 +19,7 @@ const displayEventDetails = () => {
                 <p>${event.description}</p>
                 <p>${event.isFree? "No entry fee required": event.fee}</p>
                 <p>${event.isOnline? "Online event": event.location}</p>
+                <a href="/edit-my-event.html?id=${index}"><button>Edit</button></a>
             </div>
             `);
             eventList.append(listItem);
