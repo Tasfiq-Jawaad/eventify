@@ -15,6 +15,7 @@ const displayEventDetails = () => {
             const listItem = $("<li>").append(`
             <div>
                 <h2>${event.title}</h2>
+                <h3>${event.host}</h3>
                 <p>${event.description}</p>
                 <p>${event.isFree? "No entry fee required": event.fee}</p>
                 <p>${event.isOnline? "Online event": event.location}</p>
