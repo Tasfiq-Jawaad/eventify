@@ -4,7 +4,7 @@ $(document).ready(function () {
     if(eventID)
      getEventDetails(eventID);
     else
-    displayMessage("No such event found. Make sure the query parameter in the url is correct")
+    displayMessage("404! No such event found. Make sure the query parameter in the url is correct")
 
     $("#eventForm").submit(function (event) {
         event.preventDefault(); // Prevent page form reloading
@@ -24,7 +24,7 @@ $(document).ready(function () {
                 eventData[eventID].location = event?.target?.isOnline?.checked ? "Online" : event?.target?.location?.value;
                 eventData[eventID].fee = event?.target?.isFree?.checked ? 0 : event?.target?.fee?.value;
                 eventData[eventID].isFree = event?.target?.isFree?.checked;
-                eventData[eventID].isOnline = event?.target?.isFree?.checked;
+                eventData[eventID].isOnline = event?.target?.isOnline?.checked;
 
                 // Store updated event data back into local storage
                 localStorage.setItem("eventData", JSON.stringify(eventData));
@@ -55,9 +55,9 @@ const getEventDetails = (eventID) => {
             $("#host").val(event.host);
             $("#description").val(event.description);
             $("#location").val(event.location).prop("disabled", event.isOnline);
-            $("#isOnline").prop("checked", event.isOnline);
+            $(".isOnline").prop("checked", event.isOnline);
             $("#fee").val(event.fee).prop("disabled", event.isFree);
-            $("#isFree").prop("checked", event.isFree);
+            $(".isFree").prop("checked", event.isFree);
 
         } else {
             // Display message if id not found in local storage
@@ -75,6 +75,6 @@ const getQueryParam = () => {
 }
 
 const displayMessage = (message) => {
-    $("#formContainer").empty();
-    $("#formContainer").append(`<p>${message}</p>`);
+    $("main").empty();
+    $("main").append(`<p class="text-3xl text-red-500 font-black ms-8 mt-6 text-center">${message}</p>`);
 }
