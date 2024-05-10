@@ -43,3 +43,14 @@ body {
     filter: blur(300px);
     opacity: 70%;
 }
+
+/* hiding the digit spin button  */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
