@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,10 +19,11 @@
     <link rel="stylesheet" href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css" />
     <script defer type="module" src="https://unpkg.com/@material-tailwind/html@latest/scripts/popover.js"></script>
     <script defer src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>
-    
+
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/1ecf19675f.js" crossorigin="anonymous"></script>
 </head>
+
 <body class="relative">
     <header class="sticky top-0 z-10">
         <nav class="block w-full max-w-full px-4 py-2 text-white rounded-none shadow-md h-max border-white/80 bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4"
@@ -40,7 +42,7 @@
                                     Home
                                 </a>
                             </li>
-                            
+
                             <li class="block p-1 font-sans antialiased font-normal leading-normal ">
                                 <a href="all-events.html"
                                     class="flex items-center px-6 py-3 text-center uppercase align-middle transition-all rounded-lg select-none hover:bg-white/10 active:bg-white/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
@@ -146,9 +148,71 @@
             </div>
         </nav>
     </header>
-    <h1>Sign up</h1>
+    <main>
+        <h1 class="text-3xl text-white font-black ms-8 mt-6 text-center">Sign up</h1>
 
-    <footer class="relative bottom-0 w-full">
+        <div class="w-full mt-6 flex justify-center">
+            <form id="eventForm"
+                class="p-12 rounded-2xl shadow-2xl drop-shadow-2xl form bg-white/30 backdrop-blur-md w-full min-w-[312px] mx-7 max-w-[50rem] text-white flex flex-col gap-4">
+
+                <!-- Full name -->
+                <p class="text-xl font-semibold">Full name</p>
+                <div class="relative h-10 w-full min-w-[200px]">
+                    <input type="text" id="name" name="name" required
+                        class="peer h-full w-full rounded-[7px] border border-white bg-transparent px-3 py-2.5 font-sans text-sm font-normal  !text-white outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-white placeholder-shown:border-t-white focus:border-2 focus:border-white focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                        placeholder=" " />
+                    <label for="name"
+                        class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight !text-white transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-white before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-white after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-white peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-white peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-white peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+                        Full name
+                    </label>
+                </div>
+
+                <!-- email -->
+                <p class="text-xl font-semibold">Email</p>
+                <div class="relative h-10 w-full min-w-[200px]">
+                    <input type="email" id="email" name="email" required
+                        class="peer h-full w-full rounded-[7px] border border-white bg-transparent px-3 py-2.5 font-sans text-sm font-normal  !text-white outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-white placeholder-shown:border-t-white focus:border-2 focus:border-white focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                        placeholder=" " />
+                    <label for="email"
+                        class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight !text-white transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-white before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-white after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-white peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-white peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-white peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+                        Email
+                    </label>
+                </div>
+
+                <!-- password -->
+                <p class="text-xl font-semibold">Password</p>
+                <div class="relative h-10 w-full min-w-[200px]">
+                    <input type="password" id="password" name="password" required
+                        class="peer h-full w-full rounded-[7px] border border-white bg-transparent px-3 py-2.5 font-sans text-sm font-normal  !text-white outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-white focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                        placeholder=" " />
+                    <label for="password"
+                        class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight !text-white transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-white before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-white after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-white peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-white peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-white peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+                        Password
+                    </label>
+                </div>
+
+
+                <!-- confirm password -->
+                <p class="text-xl font-semibold">Confirm Password</p>
+                <div class="relative h-10 w-full min-w-[200px]">
+                    <input type="password" id="confirm-password" name="confirm-password" required
+                        class="peer h-full w-full rounded-[7px] border border-white bg-transparent px-3 py-2.5 font-sans text-sm font-normal  !text-white outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-white focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                        placeholder=" " />
+                    <label for="confirm-password"
+                        class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight !text-white transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-white before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-white after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-white peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-white peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-white peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+                        Password
+                    </label>
+                </div>
+                <button
+                    class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+                    type="submit" data-ripple-light="true">
+                    Submit</button>
+            </form>
+
+        </div>
+    </main>
+
+    <footer class="relative mt-20 bottom-0 w-full">
         <div class="w-full px-8 mx-auto max-w-7xl">
             <div class="grid justify-between grid-cols-1 text-white gap-4 md:grid-cols-2">
                 <h5
@@ -222,4 +286,5 @@
         </div>
     </footer>
 </body>
+
 </html>
