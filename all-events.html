@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
     <!-- jquery cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    
+
     <!-- custom js scripts -->
     <script type="module" defer src="myEvents.js"></script>
     <script type="module" defer src="allEvents.js"></script>
@@ -22,10 +23,11 @@
     <link rel="stylesheet" href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css" />
     <script defer type="module" src="https://unpkg.com/@material-tailwind/html@latest/scripts/popover.js"></script>
     <script defer src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>
-    
+
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/1ecf19675f.js" crossorigin="anonymous"></script>
 </head>
+
 <body class="relative">
     <header class="sticky top-0 z-10">
         <nav class="block w-full max-w-full px-4 py-2 text-white rounded-none shadow-md h-max border-white/80 bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4"
@@ -44,7 +46,7 @@
                                     Home
                                 </a>
                             </li>
-                            
+
                             <li class="block p-1 font-sans antialiased font-normal leading-normal ">
                                 <a href="all-events.html"
                                     class="flex items-center px-6 py-3 text-center uppercase align-middle transition-all rounded-lg select-none hover:bg-white/10 active:bg-white/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
@@ -150,8 +152,13 @@
             </div>
         </nav>
     </header>
-    <div id="eventsContainer">
+    <div>
         <h1>My events</h1>
+        <div id="eventsContainer">
+            <ul class="flex flex-wrap gap-16 justify-center">
+
+            </ul>
+        </div>
     </div>
 
     <footer class="relative bottom-0 w-full">
@@ -228,4 +235,5 @@
         </div>
     </footer>
 </body>
+
 </html>

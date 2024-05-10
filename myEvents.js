@@ -10,24 +10,44 @@ const displayEventDetails = () => {
         eventData = JSON.parse(eventData);
 
         // Display event details as list items
-        let eventList = $("<ul>");
         eventData.forEach(function(event, index) {
-            const listItem = $("<li>").append(`
-            <div>
-                <h2>${event.title}</h2>
-                <h3>${event.host}</h3>
-                <p>${event.description}</p>
-                <p>${event.isFree? "No entry fee required": event.fee}</p>
-                <p>${event.isOnline? "Online event": event.location}</p>
-                <a href="event-details.html?local=${index}"><button>View details</button></a>
-                <a href="edit-my-event.html?id=${index}"><button>Edit</button></a>
-            </div>
+            const shortDescription = event.description.split(" ").slice(0, 20).join(" ");
+            const formattedDescription = shortDescription.length < event.description.length ? shortDescription + "..." : shortDescription;
+            $("#eventsContainer").children('ul:nth-child(1)').append(`
+            <li>
+                <div
+                    class="relative flex flex-col mt-6 text-white bg-white/30 backdrop-blur-md drop-shadow-2xl shadow-2xl bg-clip-border rounded-xl w-96 h-full">
+                        <div class="p-6">
+                            <h2 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal">
+                                ${event.title}
+                            </h2>
+                            <h3>${event.host}</h3>
+                            <p class="block font-sans  antialiased font-light leading-relaxed text-inherit">
+                                ${formattedDescription}
+                            </p>
+                            <p>${event.isOnline ? "Online event" : `Location: ${event.location}`}</p>
+                            <p>${event.isFree ? "No entry fee required" : `Entry fee: £ ${event.fee}`}</p>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="event-details.html?local=${index}">
+                                <button
+                                    class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+                                    type="button">
+                                    Read More
+                                </button>
+                            </a>
+                            <a href="edit-my-event.html?id=${index}">
+                                <button
+                                    class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+                                    type="button">
+                                    Edit
+                                </button>
+                            </a>
+                        </div>
+                </div>
+            </li>
             `);
-            eventList.append(listItem);
         });
-
-        // Append event list to the container
-        $("#eventsContainer").append(eventList);
     } else {
         // Display message if there's no event data in local storage
         $("#eventsContainer").append(`<p id="message">No saved events</p>`);
