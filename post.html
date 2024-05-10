@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css" />
     <script defer type="module" src="https://unpkg.com/@material-tailwind/html@latest/scripts/popover.js"></script>
     <script defer src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>
+    <script type="module" src="https://unpkg.com/@material-tailwind/html@latest/scripts/tooltip.js"></script>
 
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/1ecf19675f.js" crossorigin="anonymous"></script>
@@ -210,11 +211,17 @@
                         </div>
 
                         <!-- button to get the address using geolocation and google's api -->
-                        <button
+                        <button data-ripple-light="true" data-tooltip-target="tooltip-animation"
                             class="h-[calc(100%-8px)] w-[32px] !absolute right-1 top-1 select-none rounded bg-blue-gray-500 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-gray-500/20 transition-all hover:shadow-lg hover:shadow-blue-gray-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                             type="button" id="getLocationButton">
                             <i class="fa-solid fa-location-crosshairs text-lg"></i>
                         </button>
+                        <div data-tooltip="tooltip-animation" data-tooltip-mount="opacity-100 scale-100"
+                            data-tooltip-unmount="opacity-0 scale-0 pointer-events-none"
+                            data-tooltip-transition="transition-all duration-200 origin-bottom"
+                            class="absolute z-50 whitespace-normal rounded-lg bg-black py-1.5 px-3 font-sans text-sm font-normal text-white focus:outline-none w-max">
+                            Get geolocation and fetch formatted address using google map's api
+                        </div>
                     </div>
                     <div class="inline-flex items-center">
                         <label class="relative flex items-center p-3 rounded-full cursor-pointer" htmlFor="ripple-on"
