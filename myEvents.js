@@ -50,6 +50,6 @@ const displayEventDetails = () => {
         });
     } else {
         // Display message if there's no event data in local storage
-        $("#eventsContainer").append(`<p id="message">No saved events</p>`);
+        $("#eventsContainer").append(`<p class="text-3xl text-red-500 font-black ms-8 mt-6 text-center" id="message">No saved events</p>`);
     }
 }
