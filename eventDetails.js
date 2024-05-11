@@ -62,6 +62,7 @@ const displayEventDetails = (event) => {
     $("#host").text(event.host);
     $("#description").text(event.description);
     $("#location").text(`Location: ${event.location}`);
+    $("#date").text(`Date: ${event.date}`);
     $("#fee").text(`Entry fee: ${event.fee}`);
 }
 
