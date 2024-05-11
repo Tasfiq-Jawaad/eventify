@@ -22,6 +22,9 @@ $(document).ready(function () {
                 eventData[eventID].host = event?.target?.host?.value;
                 eventData[eventID].description = event?.target?.description?.value;
                 eventData[eventID].location = event?.target?.isOnline?.checked ? "Online" : event?.target?.location?.value;
+                eventData[eventID].thumbnailUrl = event?.target?.thumbnailUrl?.value;
+                eventData[eventID].imageUrl = event?.target?.imageUrl?.value;
+                eventData[eventID].date = event?.target?.date?.value;
                 eventData[eventID].fee = event?.target?.isFree?.checked ? 0 : event?.target?.fee?.value;
                 eventData[eventID].isFree = event?.target?.isFree?.checked;
                 eventData[eventID].isOnline = event?.target?.isOnline?.checked;
