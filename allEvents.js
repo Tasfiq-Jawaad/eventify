@@ -18,7 +18,7 @@ const displayEventDetails = (events) => {
             $("#eventsContainer").children('ul:nth-child(1)').append(`
             <li class="relative">
                 <div class="card relative flex flex-col md:flex-row items-center mt-6 text-white bg-white/30 backdrop-blur-md drop-shadow-2xl shadow-2xl bg-clip-border rounded-xl w-[312px] sm:w-[400px] md:w-[600px] h-full">
-                    <img src='${event.thumbnailUrl? event.thumbnailUrl : 'assets/Placeholder-_-Glossary.svg'}' alt="Thumbnail for ${event.title}" class="w-[288px] h-[288px] aspect-square rounded-xl mt-6 md:mt-0 md:ms-6"/>
+                    <img src='${event.thumbnailUrl? event.thumbnailUrl : 'assets/Placeholder-_-Glossary.svg'}' alt="Thumbnail for ${event.title}" class="w-[288px] h-[288px] aspect-square rounded-xl mt-6 md:mt-0 md:ms-6 object-cover"/>
                     <div
                         class="flex flex-col">
                             <div class="p-6">
