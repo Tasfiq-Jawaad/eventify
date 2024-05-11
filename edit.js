@@ -1,3 +1,5 @@
+import { showToast } from "./utility.js";
+
 $(document).ready(function () {
     let eventID = getQueryParam() || null;
     
@@ -32,7 +34,7 @@ $(document).ready(function () {
                 // Store updated event data back into local storage
                 localStorage.setItem("eventData", JSON.stringify(eventData));
 
-                alert("Event details have been updated successfully!");
+                showToast("Event details have been updated successfully!")
             } else {
                 alert("Invalid event ID.");
             }

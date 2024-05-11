@@ -98,4 +98,13 @@ const displayAddressWarningMessage = (message) => {
     });
 }
 
+export const showToast = (message)=>{
+    $("#message").text(message);
+    $("#toast").show();
+
+    $("#closeToast").click(()=>{
+        $("#toast").hide();
+    })
+}
+
 export default getUserLocation

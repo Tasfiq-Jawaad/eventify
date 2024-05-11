@@ -1,3 +1,5 @@
+import { showToast } from "./utility.js";
+
 $(document).ready(function () {
 
     $("#eventForm").submit(function (event) {
@@ -29,6 +31,6 @@ $(document).ready(function () {
         // Store updated data in local storage
         localStorage.setItem("eventData", JSON.stringify(eventDataArray));
 
-        alert("Event data has been stored in local storage!");
+        showToast("Event data has been stored in local storage!");
     });
 });
