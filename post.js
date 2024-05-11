@@ -12,6 +12,8 @@ $(document).ready(function () {
             host: $("#host").val(),
             description: $("#description").val(),
             location: $("#isOnline").prop("checked") ? "Online" : $("#location").val(),
+            thumbnailUrl: $("#thumbnailUrl").val(),
+            imageUrl: $("#imageUrl").val(),
             fee: $("#isFree").prop("checked") ? 0 : $("#fee").val(),
             isFree: $("#isFree").prop("checked"),
             isOnline: $("#isOnline").prop("checked")
