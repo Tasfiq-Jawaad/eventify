@@ -30,6 +30,7 @@ const displayEventDetails = (events) => {
                                     ${formattedDescription}
                                 </p>
                                 <p>${event.isOnline ? "Online event" : `Location: ${event.location}`}</p>
+                                <p>Date (dd/mm/yy): ${event.date}</p>
                                 <p>${event.isFree ? "No entry fee required" : `Entry fee: £ ${event.fee}`}</p>
                             </div>
                             <div class="p-6 pt-0">
