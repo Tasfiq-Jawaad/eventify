@@ -1,0 +1,129 @@
+#contact-container{
+    display: flex;
+    flex-direction: column;
+    gap: 62px;
+    margin-top: var(--primary-spacing);
+}
+
+#contact-container > *{
+    flex-grow: 1;
+}
+
+
+#contact-details-container p{
+    margin-bottom: 2rem;
+}
+
+#contact-details{
+    flex-grow: 1;
+    text-align: justify;
+    justify-content: center;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+
+#contact-details:has(.fancy:hover) .word:not(.fancy:hover){
+    opacity: 0.2;
+}
+
+.fancy > span{
+    display: inline-block;
+    transition: transform 350ms ease;
+}
+
+.fancy:hover > span:nth-child(1){
+    transform: translate(-80%, 60%) rotate(8deg);
+}
+
+.fancy:hover > span:nth-child(2){
+    transform: translate(-40%, 20%) rotate(4deg);
+}
+
+.fancy:hover > span:nth-child(3){
+    transform: translate(-10%, 60%) rotate(-6deg);
+}
+
+.fancy:hover > span:nth-child(4){
+    transform: translate(0%, 8%) rotate(-8deg);
+}
+
+.fancy:hover > span:nth-child(5){
+    transform: translate(0%, -20%) rotate(5deg);
+}
+
+.fancy:hover > span:nth-child(6){
+    transform: translate(0%, 20%) rotate(-3deg);
+}
+
+.fancy:hover > span:nth-child(7){
+    transform: translate(0%, -30%) rotate(-5deg);
+}
+
+.fancy:hover > span:nth-child(8){
+    transform: translate(0%, 15%) rotate(10deg);
+}
+
+.fancy:hover > span:nth-child(9){
+    transform: translate(0%, -30%) rotate(8deg);
+}
+
+.fancy:hover > span:nth-child(10){
+    transform: translate(0%, 15%) rotate(-6deg);
+}
+
+.fancy:hover > span:nth-child(11){
+    transform: translate(0%, 20%) rotate(4deg);
+}
+
+.fancy:hover > span:nth-child(12){
+    transform: translate(0%, 30%) rotate(-2deg);
+}
+
+.fancy:hover > span:nth-child(13){
+    transform: translate(0%, 2%) rotate(4deg);
+}
+
+.fancy:hover > span:nth-child(14){
+    transform: translate(0%, 30%) rotate(-5deg);
+}
+
+.fancy:hover > span:nth-child(15){
+    transform: translate(0%, -10%) rotate(-2deg);
+}
+
+.fancy:hover > span:nth-child(16){
+    transform: translate(0%, 30%) rotate(3deg);
+}
+
+.fancy:hover > span:nth-child(17){
+    transform: translate(0%, 15%) rotate(-1deg);
+}
+
+.fancy:hover > span:nth-child(18){
+    transform: translate(0%, -15%) rotate(0deg);
+}
+
+.fancy:hover > span:nth-child(19){
+    transform: translate(-20%, 30%) rotate(-5deg);
+}
+
+.fancy > span:nth-child(20){
+    transform: translate(15%, 15%) rotate(-2deg);
+}
+
+}
+.space{
+    margin-right: 1ch;
+}
+
+
+
+@media screen and (min-width: 996px) {
+    #contact-container{
+        display: flex;
+        flex-direction: row;
+        gap: 62px;
+        margin-top: var(--primary-spacing);
+    }
+}
