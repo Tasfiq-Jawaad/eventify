@@ -52,7 +52,12 @@ const getServerEventDetails = async (eventID) => {
 }
 
 const displayEventDetails = (event) => {
-    $("#image").prop("src", `${event.imageUrl? event.imageUrl : 'assets/Placeholder-_-Glossary.svg'}`)
+    if(event.thumbnailUrl && event.imageUrl){
+        $("#image").prop("srcset", `${event.thumbnailUrl} 312w, ${event.imageUrl} 450w`)
+    }
+    else{
+        $("#image").prop("src", `${event.imageUrl? event.imageUrl : 'assets/Placeholder-_-Glossary.svg'}`)
+    }
     $("#title").text(event.title);
     $("#host").text(event.host);
     $("#description").text(event.description);
