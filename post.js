@@ -6,12 +6,15 @@ $(document).ready(function () {
         const existingData = localStorage.getItem("eventData");
         const eventDataArray = existingData ? JSON.parse(existingData) : [];
 
+        console.log(event.target.date.value)
+
         // Get form data
         const formData = {
             title: $("#title").val(),
             host: $("#host").val(),
             description: $("#description").val(),
             location: $("#isOnline").prop("checked") ? "Online" : $("#location").val(),
+            date: $("#date").val(),
             thumbnailUrl: $("#thumbnailUrl").val(),
             imageUrl: $("#imageUrl").val(),
             fee: $("#isFree").prop("checked") ? 0 : $("#fee").val(),

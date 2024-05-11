@@ -27,6 +27,9 @@
 
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/1ecf19675f.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/datepicker.min.js"></script>
+
 </head>
 
 <body class="relative">
@@ -163,7 +166,7 @@
                 <!-- title -->
                 <p class="text-xl font-semibold">Title of the event</p>
                 <div class="relative h-10 w-full min-w-[200px]">
-                    <input  aria-label="Title" type="text" id="title" name="title" required
+                    <input aria-label="Title" type="text" id="title" name="title" required
                         class="peer h-full w-full rounded-[7px] border border-white bg-transparent px-3 py-2.5 font-sans text-sm font-normal  !text-white outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-white placeholder-shown:border-t-white focus:border-2 focus:border-white focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                         placeholder=" " />
                     <label for="title"
@@ -211,7 +214,8 @@
                         </div>
 
                         <!-- button to get the address using geolocation and google's api -->
-                        <button aria-label="location button" data-ripple-light="true" data-tooltip-target="tooltip-animation"
+                        <button aria-label="location button" data-ripple-light="true"
+                            data-tooltip-target="tooltip-animation"
                             class="h-[calc(100%-8px)] w-[32px] !absolute right-1 top-1 select-none rounded bg-blue-gray-500 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-gray-500/20 transition-all hover:shadow-lg hover:shadow-blue-gray-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                             type="button" id="getLocationButton">
                             <i class="fa-solid fa-location-crosshairs text-lg"></i>
@@ -243,11 +247,11 @@
                         </label>
                     </div>
                 </div>
-                
+
                 <!-- thumbnail url -->
                 <p class="text-xl font-semibold">Thumbnail url (optional, 288x288)</p>
                 <div class="relative h-10 w-full min-w-[200px]">
-                    <input  aria-label="thumbnail url" type="text" id="thumbnailUrl" name="thumbnailUrl"
+                    <input aria-label="thumbnail url" type="text" id="thumbnailUrl" name="thumbnailUrl"
                         class="peer h-full w-full rounded-[7px] border border-white bg-transparent px-3 py-2.5 font-sans text-sm font-normal  !text-white outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-white placeholder-shown:border-t-white focus:border-2 focus:border-white focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                         placeholder=" " />
                     <label for="thumbnailUrl"
@@ -259,7 +263,7 @@
                 <!-- Image url -->
                 <p class="text-xl font-semibold">Image url (optional, 400x400)</p>
                 <div class="relative h-10 w-full min-w-[200px]">
-                    <input  aria-label="image url" type="text" id="imageUrl" name="imageUrl"
+                    <input aria-label="image url" type="text" id="imageUrl" name="imageUrl"
                         class="peer h-full w-full rounded-[7px] border border-white bg-transparent px-3 py-2.5 font-sans text-sm font-normal  !text-white outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-white placeholder-shown:border-t-white focus:border-2 focus:border-white focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                         placeholder=" " />
                     <label for="imageUrl"
@@ -267,6 +271,23 @@
                         Image url
                     </label>
                 </div>
+
+                <!-- Date picker -->
+                <p class="text-xl font-semibold">Date of the event</p>
+
+                <div class="relative w-full">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                        </svg>
+                    </div>
+                    <input datepicker datepicker-format="dd/mm/yyyy" datepicker-autohide type="text"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-transparent dark:border-white dark:placeholder-white dark:text-white dark:focus:ring-white dark:focus:border-white"
+                        placeholder="Select date" id="date" name="date">
+                </div>
+
 
                 <!-- entry fee -->
                 <p class="text-xl font-semibold">Entry fee</p>
@@ -366,7 +387,8 @@
                 <p
                     class="block mb-4 font-sans text-sm antialiased font-normal leading-normal text-center text-white md:mb-0">
                     © 2024
-                    <a aria-label="github-link" href="https://github.com/Tasfiq-Jawaad">Author: Mohammad Tasfiq Jawaad</a>. All
+                    <a aria-label="github-link" href="https://github.com/Tasfiq-Jawaad">Author: Mohammad Tasfiq
+                        Jawaad</a>. All
                     Rights Reserved.
                 </p>
                 <div class="flex gap-4 text-white sm:justify-center">
