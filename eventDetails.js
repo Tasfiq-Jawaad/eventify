@@ -55,8 +55,8 @@ const displayEventDetails = (event) => {
     $("#title").text(event.title);
     $("#host").text(event.host);
     $("#description").text(event.description);
-    $("#location").text(event.location);
-    $("#fee").text(event.fee).prop("disabled", event.isFree);
+    $("#location").text(`Location: ${event.location}`);
+    $("#fee").text(`Entry fee: ${event.fee}`);
 }
 
 const getLocalID = () => {
