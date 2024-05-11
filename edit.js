@@ -55,6 +55,9 @@ const getEventDetails = (eventID) => {
             $("#host").val(event.host);
             $("#description").val(event.description);
             $("#location").val(event.location).prop("disabled", event.isOnline);
+            $("#thumbnailUrl").val(event.thumbnailUrl);
+            $("#imageUrl").val(event.imageUrl);
+            $("#date").val(event.date);
             $(".isOnline").prop("checked", event.isOnline);
             $("#fee").val(event.fee).prop("disabled", event.isFree);
             $(".isFree").prop("checked", event.isFree);
