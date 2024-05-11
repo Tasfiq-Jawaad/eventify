@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,10 +19,11 @@
     <link rel="stylesheet" href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css" />
     <script defer type="module" src="https://unpkg.com/@material-tailwind/html@latest/scripts/popover.js"></script>
     <script defer src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>
-    
+
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/1ecf19675f.js" crossorigin="anonymous"></script>
 </head>
+
 <body class="relative">
     <header class="sticky top-0 z-10">
         <nav class="block w-full max-w-full px-4 py-2 text-white rounded-none shadow-md h-max border-white/80 bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4"
@@ -40,7 +42,7 @@
                                     Home
                                 </a>
                             </li>
-                            
+
                             <li class="block p-1 font-sans antialiased font-normal leading-normal ">
                                 <a href="all-events.html"
                                     class="flex items-center px-6 py-3 text-center uppercase align-middle transition-all rounded-lg select-none hover:bg-white/10 active:bg-white/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
@@ -146,7 +148,30 @@
             </div>
         </nav>
     </header>
-    <h1>About us</h1>
+
+    <main class="mt-4 flex flex-col text-white gap-14 lg:gap-20 xl:gap-24 px-4 md:px-10 lg:px-16">
+        <section class="flex flex-col justify-between lg:flex-row">
+            <article class="flex flex-col gap-3 md:pag-10 lg:w-4xl lg:gap-6 xl:gap-10 xl:w-[50%] justify-center">
+                <h1 class="font-extrabold text-3xl sm:text-4xl md:text-5xl xl:text-6xl">About us</h1>
+                <!-- <h2 class="font-bold text-xl sm:text-2xl md:text-3xl xl:text-xl">Effortless Events, Exceptional
+                    Experiences</h2> -->
+                <p class="text-lg text-wrap md:text-xl xl:text-3xl">
+                    Welcome to eventify, where events come alive! We are a passionate team dedicated to
+                    connecting event organizers and attendees in an innovative and user-friendly environment. Our
+                    platform was born out of a desire to revolutionize the way people discover, share, and experience
+                    events.<br/>
+
+                    At eventify, we believe in the power of community and connection. Whether you're organizing a
+                    small gathering or a large-scale conference, we provide the tools and resources you need to bring
+                    your vision to life. From event promotion to ticket sales, our platform empowers organizers to reach
+                    their audience and make a lasting impact.
+                </p>
+            </article>
+            <div class="w-full lg:max-w-[40%] my-auto">
+                <img src="assets/About us page-rafiki.svg" alt="Illustration of people planning events" class="w-full" />
+            </div>
+        </section>
+    </main>
 
     <footer class="relative bottom-0 w-full mt-20">
         <div class="w-full px-8 mx-auto max-w-7xl">
@@ -205,7 +230,8 @@
                 <p
                     class="block mb-4 font-sans text-sm antialiased font-normal leading-normal text-center text-white md:mb-0">
                     © 2024
-                    <a aria-label="github-link" href="https://github.com/Tasfiq-Jawaad">Author: Mohammad Tasfiq Jawaad</a>. All
+                    <a aria-label="github-link" href="https://github.com/Tasfiq-Jawaad">Author: Mohammad Tasfiq
+                        Jawaad</a>. All
                     Rights Reserved.
                 </p>
                 <div class="flex gap-4 text-white sm:justify-center">
@@ -222,4 +248,5 @@
         </div>
     </footer>
 </body>
+
 </html>
