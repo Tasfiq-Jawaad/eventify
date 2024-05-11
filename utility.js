@@ -71,6 +71,7 @@ const getUserLocation = () => {
         });
     } else {
         $("#spinner").remove();
+        alert("Location denied")
         console.error("Geolocation is not supported by this browser.");
     }
 }
