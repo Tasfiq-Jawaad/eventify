@@ -52,6 +52,7 @@ const getServerEventDetails = async (eventID) => {
 }
 
 const displayEventDetails = (event) => {
+    $("#image").prop("src", `${event.imageUrl? event.imageUrl : 'assets/Placeholder-_-Glossary.svg'}`)
     $("#title").text(event.title);
     $("#host").text(event.host);
     $("#description").text(event.description);
